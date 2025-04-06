@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BarLoader } from "react-spinners";
 import { toast } from "react-toastify";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const NewsPage = () => {
   const [newsSources, setNewsSources] = useState([]);
@@ -11,7 +12,7 @@ const NewsPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get('/api/news');
+        const response = await axios.get(`${baseURL}/api/news`);
         if (response?.data?.sources) {
           setNewsSources(response.data.sources);
         } else {

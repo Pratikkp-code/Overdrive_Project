@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 
 const MemesPage = () => {
@@ -12,7 +13,7 @@ const MemesPage = () => {
   const fetchMemes = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`/api/memes/${count}`);
+      const response = await axios.get(`${baseURL}/api/memes/${count}`);
       if (response?.data?.memes) {
         setMemes(response.data.memes);
       } else {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const SpotifyTrackComponent = () => {
   const [song_name, setSong_name] = useState("");
@@ -11,7 +12,7 @@ const SpotifyTrackComponent = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`/api/music/${song_name}`);
+      const response = await axios.get(`${baseURL}/api/music/${song_name}`);
       setTracks(response.data.tracks.items);
     } catch (err) {
       setError("Failed to fetch tracks");

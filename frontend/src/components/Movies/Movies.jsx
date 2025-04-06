@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const MovieComponent = () => {
   const [movie, setMovie] = useState(null);
@@ -12,7 +12,7 @@ const MovieComponent = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`/api/movies/${title}`);
+      const response = await axios.get(`${baseURL}/api/movies/${title}`);
       if (response?.data?.Title) {
         setMovie(response.data);
       } else {

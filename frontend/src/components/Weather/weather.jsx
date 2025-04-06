@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 const WeatherPage = () => {
   const [city, setCity] = useState("");
@@ -13,7 +14,7 @@ const WeatherPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`/api/weather/${city}`);
+      const response = await axios.get(`${baseURL}/api/weather/${city}`);
       if (response?.data?.current && response?.data?.location) {
         setWeatherData(response.data);
       } else {
