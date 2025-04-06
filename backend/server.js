@@ -14,7 +14,7 @@ const SPOTIFY_CLIENT_SECRET = process.env.CLIENT_SECRET;
 
 const app = express();
 app.use(cors());
-
+app.use(express.json());
 // News api
 
 app.get('/api/news',async (req,res)=>{
