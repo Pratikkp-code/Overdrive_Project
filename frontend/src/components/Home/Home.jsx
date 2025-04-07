@@ -12,12 +12,12 @@ export default function Home() {
                 </div>
 
                 <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="./public/welcome.png" />
+                    <img className="w-96" src="/welcome.png" />
                 </div>
             </aside>
 
             <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="./public/music.png" alt="image2" />
+                <img className="sm:w-96 w-48" src="/music.png" alt="image2" />
             </div>
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Scroll Less. Know More.</h1>
