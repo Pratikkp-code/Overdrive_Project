@@ -2,6 +2,10 @@
 
 Website name: Smart Info Hub
 
+My website link https://overdrive-frontend.onrender.com
+
+I have deployed the website both frontend and backend on Render app.
+
 I have created a website for Infotainment which consist of 
 
 News API : https://newsapi.org/v2/top-headlines/sources?apiKey=${news_api_key}
