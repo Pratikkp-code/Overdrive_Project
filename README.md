@@ -19,6 +19,7 @@ Movies API: https://www.omdbapi.com/?apikey=${movies_api_key}&t=${name}&plot=ful
 Music API: https://api.spotify.com/v1/search?q=${song_name}&type=track&limit=10&offset=${offset}
 
 The NPM Packages used in this project are :
+
 1.Axios: This package is been used to fetch the api to backend and frontend. It is also making HTTP request to external or internal APIs from your frontend or backend code.
 
 2.Cors: It is been used to act as middleware and is allowing the backend server to handle requests from frontend .
